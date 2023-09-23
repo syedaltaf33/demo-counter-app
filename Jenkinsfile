@@ -24,6 +24,15 @@ pipeline{
                 }
             }
         }
+        stage ("build test"){
+
+            steps{
+
+                script{
+                    sh 'mvn clean install'
+                }
+            }
+        }
 
     }
         
