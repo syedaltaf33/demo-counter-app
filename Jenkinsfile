@@ -13,7 +13,18 @@ pipeline{
                     git branch: 'main', url: 'https://github.com/syedaltaf33/demo-counter-app.git'
                 }
             }
+            
         }
+        stage ("UNIT Test"){
+
+            steps{
+
+                script{
+                    sh 'mvn test'
+                }
+            }
         }
+
+    }
         
 }
